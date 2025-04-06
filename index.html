@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi, I'm Akshaya | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    :root {
+      --bg-color: #fdfcfb;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: #1f2937;
+      --footer-bg: #1e293b;
+      --link-color: #1e40af;
+      --link-hover: #2563eb;
+      --badge-bg: #e0e7ff;
+      --badge-color: #4338ca;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #111827;
+      --text-color: #f3f4f6;
+      --card-bg: #1f2937;
+      --header-bg: #0f172a;
+      --footer-bg: #0f172a;
+      --link-color: #93c5fd;
+      --link-hover: #60a5fa;
+      --badge-bg: #3730a3;
+      --badge-color: #e0e7ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--header-bg);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+    }
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    @media(min-width: 768px) {
+      .about-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+    .about-photo {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .about-photo img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+    .badge {
+      background: var(--badge-bg);
+      color: var(--badge-color);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--footer-bg);
+      color: white;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .contact-methods a {
+      text-decoration: none;
+      color: var(--link-color);
+      font-weight: 600;
+    }
+    .contact-methods a:hover {
+      color: var(--link-hover);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <h1>Hi, I'm Akshaya</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-right">
+        <p>Hello! I'm Akshaya, a creative front-end developer who enjoys crafting visually appealing and user-friendly websites. My passion lies in transforming design concepts into interactive digital experiences.</p>
+        <p>I love learning new tools, staying updated with trends, and building accessible, responsive interfaces. I’ve worked with HTML, CSS, JavaScript, and frameworks like React, and enjoy diving into the world of UI/UX.</p>
+        <p><strong>Skills:</strong></p>
+        <div class="badge-list">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">React</span>
+          <span class="badge">Git</span>
+        </div>
+        <p><strong>Tools:</strong></p>
+        <div class="badge-list">
+          <span class="badge">VSCode</span>
+          <span class="badge">GitHub</span>
+          <span class="badge">Figma</span>
+          <span class="badge">Chrome DevTools</span>
+        </div>
+        <p><strong>Interests:</strong></p>
+        <div class="badge-list">
+          <span class="badge">UI/UX Design</span>
+          <span class="badge">Web Development</span>
+          <span class="badge">Animation</span>
+        </div>
+      </div>
+      <div class="about-photo" data-aos="fade-left">
+        <img src="akshaya.jpg" alt="Akshaya's Photo" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Personal Blog</h3>
+      <p>A clean and responsive blog site built using HTML, CSS, and JavaScript. It features blog categories, a comment section, and dynamic post loading.</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>This very portfolio! Designed with a modern aesthetic using HTML and CSS with smooth navigation and interactive sections.</p>
+    </div>
+    <div class="project-card">
+      <h3>Task Manager App</h3>
+      <p>A simple to-do list application using JavaScript. Users can add, update, and delete tasks. The UI is responsive and accessible.</p>
+    </div>
+    <div class="project-card">
+      <h3>Weather Dashboard</h3>
+      <p>Built with the OpenWeatherMap API, this app shows real-time weather updates by city, with details like temperature, humidity, and conditions.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <div class="contact-methods">
+      <p>Email: <a href="mailto:akshaya.dev@example.com">akshaya.dev@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/akshaya-48b21a229" target="_blank">linkedin.com/in/akshaya-48b21a229</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Akshaya. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  </script>
+</body>
+</html>
